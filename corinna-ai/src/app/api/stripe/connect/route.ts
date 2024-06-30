@@ -4,8 +4,7 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET!, {
-  typescript: true,
-  apiVersion: "2024-04-10",
+  apiVersion: "2024-06-20",
 });
 
 export async function GET() {
@@ -27,7 +26,7 @@ export async function GET() {
       },
       external_account: "btok_us",
       tos_acceptance: {
-        date: 1547923073,
+        date: Math.floor(Date.now() / 1000), // Use current timestamp
         ip: "172.18.80.19",
       },
     });
@@ -50,6 +49,7 @@ export async function GET() {
           phone: "8888675309",
         },
       });
+
       if (approve) {
         const person = await stripe.accounts.createPerson(account.id, {
           first_name: "Jenny",
@@ -59,13 +59,14 @@ export async function GET() {
             title: "CEO",
           },
         });
+
         if (person) {
           const approvePerson = await stripe.accounts.updatePerson(
             account.id,
             person.id,
             {
               address: {
-                city: "victoria ",
+                city: "Victoria",
                 line1: "123 State St",
                 postal_code: "V8P 1A1",
                 state: "BC",
@@ -83,13 +84,14 @@ export async function GET() {
               },
             }
           );
+
           if (approvePerson) {
             const owner = await stripe.accounts.createPerson(account.id, {
               first_name: "Kathleen",
               last_name: "Banks",
               email: "kathleen@bestcookieco.com",
               address: {
-                city: "victoria ",
+                city: "Victoria",
                 line1: "123 State St",
                 postal_code: "V8P 1A1",
                 state: "BC",
@@ -105,12 +107,14 @@ export async function GET() {
                 percent_ownership: 80,
               },
             });
+
             if (owner) {
               const complete = await stripe.accounts.update(account.id, {
                 company: {
                   owners_provided: true,
                 },
               });
+
               if (complete) {
                 const saveAccountId = await client.user.update({
                   where: {
@@ -129,7 +133,7 @@ export async function GET() {
                     return_url: "http://localhost:3000/callback/stripe/success",
                     type: "account_onboarding",
                     collection_options: {
-                      fields: "currently_due",
+                      fields: ["currently_due"],
                     },
                   });
 
