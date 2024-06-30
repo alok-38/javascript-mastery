@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
 
-export default nextConfig;
+const nextConfig = {
+	reactStrictMode: true, // or false, depending on your application needs
+	images: {
+	  domains: ['wordpress-1291389-4685774.cloudwaysapps.com'],
+	},
+  };
+
+  export default nextConfig;
