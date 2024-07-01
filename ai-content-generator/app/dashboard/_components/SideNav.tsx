@@ -29,16 +29,20 @@ const SideNav = () => {
   return (
     <div className="h-screen p-5 shadow-sm border">
       <div className="flex justify-center">
-        <Image src={"/logo.svg"} alt="logo" width={100} height={100} />
+        <Image src={"/logo.svg"} alt="logo" width={100} height={100} priority={true} />
       </div>
-	  <div>
-		{MenuList.map((menu, index) => (
-			<div>
-				<menu.icon />
-				<h2>{menu.name}</h2>
-			</div>
-		))}
-	  </div>
+      <hr className="my-6 border" />
+      <div className="mt-3">
+        {MenuList.map((menu, index) => (
+          <div
+            className="flex gap-2 mb-2 p-3
+      hover:bg-primary hover:text-white rounded-lg cursor-pointer"
+          >
+            <menu.icon />
+            <h2>{menu.name}</h2>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
