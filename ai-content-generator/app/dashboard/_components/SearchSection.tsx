@@ -9,7 +9,7 @@ const SearchSection = () => {
 		<p>What would you like to create today?</p>
 		<div className='w-full'>
 			<div className='flex gap-2 items-center p-2 border rounded-md bg-white
-			my-5 w-[30%] mx-auto'>
+			my-5 w-[50%] mx-auto'>
 				<Search className='text-primary'/>
 				<input type="text" placeholder='Search'
 				className='bg-transparent w-full outline-none text-slate-600' />

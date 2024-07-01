@@ -1,4 +1,6 @@
-export default [
+// Templates.ts
+
+const Templates = [
   {
     name: "Blog Title",
     description:
@@ -19,6 +21,7 @@ export default [
         label: "Enter blog outline",
         field: "textarea",
         name: "outline",
+        required: false, // Optional field
       },
     ],
   },
@@ -41,6 +44,7 @@ export default [
         label: "Select platform (optional)",
         field: "dropdown",
         name: "platform",
+        required: false,
       },
     ],
   },
@@ -62,6 +66,7 @@ export default [
         label: "Key features",
         field: "textarea",
         name: "features",
+        required: false, // Optional field
       },
     ],
   },
@@ -83,6 +88,7 @@ export default [
         label: "Additional details (optional)",
         field: "textarea",
         name: "details",
+        required: false, // Optional field
       },
     ],
   },
@@ -105,6 +111,7 @@ export default [
         label: "Page description",
         field: "textarea",
         name: "pageDescription",
+        required: false, // Optional field
       },
     ],
   },
@@ -126,7 +133,10 @@ export default [
         label: "Target audience (optional)",
         field: "input",
         name: "audience",
+        required: false, // Optional field
       },
     ],
   },
 ];
+
+export default Templates;
