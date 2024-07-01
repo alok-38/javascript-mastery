@@ -22,8 +22,10 @@ export interface TEMPLATE {
 // Use 'item' as a prop with type 'TEMPLATE'
 const TemplateCard = ({ item }: { item: TEMPLATE }) => {
   return (
-    <div>
+    <div className="p-5 shadow-md rounded-md border bg-white flex flex-col">
 		<Image src={item.icon} alt="icon" width={50} height={50} />
+		<h2>{item.name}</h2>
+    <p>{item.description}</p>
     </div>
   );
 };

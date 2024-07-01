@@ -1,12 +1,10 @@
-// Templates.ts
-
 const Templates = [
   {
     name: "Blog Title",
     description:
       "An AI tool that generates blog titles depending on the information provided.",
     category: "Blog",
-    icon: "https://cdn-icons-png.flaticon.com/128/2800/2800015.png",
+    icon: "https://cdn-icons-png.flaticon.com/128/3168/3168398.png",
     aiPrompt:
       "Give me five bullet points of blog topic ideas based on a given niche and outline in a rich text editor format.",
     slug: "generate-blog-title",
@@ -29,7 +27,7 @@ const Templates = [
     name: "Social Media Post Generator",
     description: "Generates engaging social media posts based on user input.",
     category: "Social Media",
-    icon: "https://example.com/icon-social-media.png",
+    icon: "https://cdn-icons-png.flaticon.com/128/2204/2204567.png",
     aiPrompt:
       "Provide keywords or a brief description for your social media post.",
     slug: "generate-social-media-post",
@@ -52,7 +50,7 @@ const Templates = [
     name: "Product Description Generator",
     description: "Automatically generates compelling product descriptions.",
     category: "E-commerce",
-    icon: "https://example.com/icon-product.png",
+    icon: "https://cdn-icons-png.flaticon.com/128/3072/3072181.png",
     aiPrompt: "Describe your product and its key features.",
     slug: "generate-product-description",
     form: [
@@ -74,7 +72,7 @@ const Templates = [
     name: "Email Subject Line Generator",
     description: "Generates catchy subject lines for email campaigns.",
     category: "Email Marketing",
-    icon: "https://example.com/icon-email.png",
+    icon: "https://cdn-icons-png.flaticon.com/128/3190/3190494.png",
     aiPrompt: "Briefly describe your email content or campaign theme.",
     slug: "generate-email-subject-line",
     form: [
@@ -96,7 +94,7 @@ const Templates = [
     name: "SEO Meta Description Generator",
     description: "Creates SEO-friendly meta descriptions for web pages.",
     category: "SEO",
-    icon: "https://example.com/icon-seo.png",
+    icon: "https://cdn-icons-png.flaticon.com/128/3857/3857343.png",
     aiPrompt:
       "Enter the main keywords and a brief description of your webpage.",
     slug: "generate-seo-meta-description",
@@ -119,7 +117,7 @@ const Templates = [
     name: "YouTube Video Title Generator",
     description: "Generates compelling titles for YouTube videos.",
     category: "Video Marketing",
-    icon: "https://example.com/icon-youtube.png",
+    icon: "https://cdn-icons-png.flaticon.com/128/1539/1539603.png",
     aiPrompt: "Describe your video content and target audience.",
     slug: "generate-youtube-video-title",
     form: [
